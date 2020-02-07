@@ -17,8 +17,8 @@
 /**
  * A two column layout for the boost theme.
  *
- * @package   theme_boost_icms
- * @copyright 2020 tim st.clair
+ * @package   theme_boost
+ * @copyright 2016 Damyon Wiese
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -46,9 +46,9 @@ $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'sidepreblocks' => $blockshtml,
+    'hasblocks' => $hasblocks,
     'middletopblocks' => $middletophtml,
     'middlebottomblocks' => $middlebottomhtml,
-    'hasblocks' => $hasblocks,
     'bodyattributes' => $bodyattributes,
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
@@ -58,5 +58,5 @@ $templatecontext = [
 $nav = $PAGE->flatnav;
 $templatecontext['flatnavigation'] = $nav;
 $templatecontext['firstcollectionlabel'] = $nav->get_collectionlabel();
-echo $OUTPUT->render_from_template('theme_boost_icms/frontpage', $templatecontext);
+echo $OUTPUT->render_from_template('theme_boost_icms/columns2', $templatecontext);
 
