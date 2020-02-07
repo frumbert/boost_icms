@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2020020702;
+$plugin->version   = 2020020705;
 $plugin->requires  = 2019051100;
 $plugin->component = 'theme_boost_icms';
 $plugin->dependencies = [
